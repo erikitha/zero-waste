@@ -17,6 +17,7 @@ chocolate = Ingredient.create!(name: "chocolate", brand: "parmalat", category: "
 
 
 
+
 bolo_chocolate = Recipe.create!(name: "Bolo de Chocolate", preptime: "60 min", description: "A melhor receita de bolo de chocolate!")
 brigadeiro = Recipe.create!(name: "Brigadeiro", preptime: "30 min", description: "Delicioso e prático!")
 omelete = Recipe.create!(name: "Omelette du fromage", preptime: "10 min", description: "O clássico frânces do renomado Chef Dexter!")
