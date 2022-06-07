@@ -1,7 +1,13 @@
 <h1>Add a ingredient to your pantry</h1>
-<%= simple_form_for @ingredient_pantries do |f| %>
+<%= simple_form_for [@ingredient_pantry] do |f| %>
   <%= f.input :best_before %>
   <%= f.input :lot %>
   <%= f.input :quantity %>
+  <%= f.association :ingredient %>
   <%= f.submit class: 'btn btn-success' %>
 <% end %>
+<%#= simple_form_for [@list, @bookmark] do |f| %>
+  <%#= f.association :movie, collection: @movies, prompt: 'Select a movie', label: false %>
+  <%#= f.input :comment, placeholder: 'Enter a comment...', label: false %>
+  <%#= f.submit class: 'btn btn-success' %>
+<%# end %>
