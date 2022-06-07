@@ -11,3 +11,9 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.body-container {
+  height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+}
