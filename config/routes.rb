@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-    resources :ingredients_pantries, only: [:index] do
+    resources :ingredient_pantries, only: [:index, :new] do
       # resources :products, only: [:index, :show]
-  end
+    end
 
   # resource :basket, only: [:show, :update, :destroy]
 
