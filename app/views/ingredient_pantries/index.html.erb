@@ -1,0 +1,7 @@
+<h1>Your Ingredients</h1>
+<div class="list-user-ingredients">
+  <ul><% @ingredients_pantries.each do |ingredients| %>
+    <li><%=ingredients.ingredient.name %></li>
+    <% end %>
+  </ul>
+</div>
