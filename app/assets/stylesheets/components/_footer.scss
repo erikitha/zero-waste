@@ -1,10 +1,10 @@
 .footer {
   display: flex;
   flex-direction: column;
-  background:  #32405a;
+  background:  rgb(249, 156, 128);
   align-items: center;
-  //text-align: center;
-  height: 170px;
+  position:fixed;
+  height: 120px;
   width: 100%;
   bottom: 0;
   left: 0;
