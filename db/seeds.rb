@@ -24,7 +24,7 @@ omelete = Recipe.create!(name: "Omelette du fromage", prep_time: "10 min", descr
 torta_de_morango = Recipe.create!(name: "Torta de Morango", prep_time: "100 min", description: "Bela e recatada")
 pão_italiano = Recipe.create!(name: "Pão Italiano", prep_time: "150 min", description: "Mamma mia!")
 
-RecipeIngredient.create!(recipe: bolo_chocolate, ingredient: leite)
+# RecipeIngredient.create!(recipe: bolo_chocolate, ingredient: leite)
 # RecipeIngredient.create!(recipe: bolo_chocolate, ingredient: chocolate_em_pó)
 # RecipeIngredient.create!(recipe: bolo_chocolate, ingredient: farinha_de_trigo)
 # RecipeIngredient.create!(recipe: bolo_chocolate, ingredient: ovo)
