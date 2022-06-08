@@ -1,9 +1,11 @@
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2><%= %></h2>
-      <p><%= %></p>
+<% @recipes.each do |recipe|%>
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <p><%= recipe.name%></p>
+        <p><%= recipe.prep_time%></p>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
