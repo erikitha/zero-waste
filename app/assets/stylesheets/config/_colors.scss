@@ -14,6 +14,18 @@ $zw-red: #F99C80;
 $zw-orange: #FFC286;
 $zw-yellow: #FFF1AF;
 $zw-green: #D4F3B7;
+$zw-blue: #A0BCC2;
 $zw-gray: #D9E3D1;
 $zw-dark-gray: #66806A;
 $yellow-main: rgb(255, 194, 134);
+
+$theme-colors: (
+  "primary":    $zw-blue,
+  "secondary":  $zw-dark-gray,
+  "success":    $zw-green,
+  "info":       $zw-yellow,
+  "warning":    $zw-orange,
+  "danger":     $zw-red,
+  "light":      $zw-gray,
+  "dark":       $zw-dark-gray,
+)

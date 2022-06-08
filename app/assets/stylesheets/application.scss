@@ -12,6 +12,11 @@
 @import "components/index";
 @import "pages/index";
 
+//.body-container {
+  // background-color: $zw-dark-gray;
+  // height: calc(100vh - 50px);
+  // max-height: calc(100vh - 50px);
+  // overflow-y: auto;
 body {
   height: 100vh;
   display: flex;
