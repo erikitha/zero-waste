@@ -28,5 +28,20 @@
           </li>
         <% end %>
 
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <li class="navbar-item">
+            <i class="fas fa-user-alt-slash"></i>
+            <p>Logout</p>
+          </li>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+          <li class="navbar-item">
+            <i class="fas fa-user"></i>
+            <p>Login</p>
+          </li>
+        <% end %>
+      <% end %>
       </ul>
 </div>
