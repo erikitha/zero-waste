@@ -7,3 +7,25 @@
 .margin-home {
   margin: 100px 0 40px 0;
 }
+.container-home {
+  margin-top: 30px;
+  width: 81%;
+  height: 61vh;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.wave {
+  position: relative;
+
+  .wave-img-1 {
+    position: absolute;
+    bottom: -42px;
+  }
+
+  .wave-img-2 {
+    position: absolute;
+    bottom: -70px;
+  }
+}

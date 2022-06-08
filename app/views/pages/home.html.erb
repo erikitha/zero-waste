@@ -1,34 +1,39 @@
 <div class="text-center margin-home">
-  <h1><strong>Hello user</strong></h1>
+  <h5><strong>Hello User</strong></h5>
 </div>
-<div class="container home-grid mb-5">
-  <div class="home-card">
-    <i class="fas fa-user icon-big"></i>
-    <p>User</p>
-  </div>
-
+<div class="container container-home home-grid mb-5">
+  <%= link_to root_path, class: "link-home" do %>
+    <div class="home-card">
+      <i class="fas fa-user icon-big"></i>
+      <p class="mt-2">User</p>
+    </div>
+  <% end %>
   <div class="home-card">
     <i class="fas fa-upload icon-big"></i>
-    <p>Add new ingredient</p>
+    <p class="mt-2">Add new ingredient</p>
   </div>
 
   <div class="home-card">
    <i class="fas fa-archive icon-big"></i>
-    <p>Storage Recomendation</p>
+    <p class="mt-2">Storage Recomentation</p>
   </div>
 
   <div class="home-card">
    <i class="fas fa-clipboard-list icon-big"></i>
-    <p>Your food pantry</p>
+    <p class="mt-2">Your food pantry</p>
   </div>
 
   <div class="home-card">
     <i class="fas fa-book icon-big"></i>
-    <p>Recipes</p>
+    <p class="mt-2">Recipes</p>
   </div>
 
 <div class="home-card">
     <i class="fas fa-list icon-big"></i>
-    <p>Checklist</p>
+    <p class="mt-2"><strong>Checklist</strong></p>
   </div>
+</div>
+<div class= "wave">
+  <%= image_tag "wave (1).svg", class: "wave-img-1"%>
+  <%= image_tag "wave.svg", class: "wave-img-2" %>
 </div>
