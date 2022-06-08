@@ -1,0 +1,117 @@
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+
+
+// $bright-color: #fff;
+// @mixin bottom {
+//  position: absolute;
+//  right: 0;
+//  left: 0;
+// }
+// * {
+//  margin: 0;
+//  padding: 0;
+//  box-sizing: border-box;
+// }
+
+// body {
+//  background-color: #80afcd;
+//  font-family: Arial, Helvetica, sans-serif;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  min-height: 100vh;
+//  line-height: 1.4;
+// }
+
+// .container {
+//  background: url("https://images.unsplash.com/photo-1574007557239-acf6863bc375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+//  background-repeat: no-repeat;
+//  background-position: center;
+//  background-size: cover;
+//  width: 350px;
+//  height: 500px;
+//  position: relative;
+//  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+//  .container__info {
+//   @include bottom;
+//   bottom: 20%;
+//   display: flex;
+//   align-items: flex-end;
+//   padding: 15px 30px;
+//   color: $bright-color;
+//   span {
+//    margin-right: 20px;
+//   }
+//   i {
+//    margin-right: 10px;
+//   }
+//  }
+//  .container__profile {
+//   background-color: #e4f2fd;
+//   display: flex;
+//   align-items: center;
+//   padding: 20px;
+//   @include bottom();
+//   bottom: 0;
+//   img {
+//    width: 60px;
+//    height: 60px;
+//    border-radius: 50%;
+//    object-position: center;
+//    object-fit: cover;
+//    margin-right: 10px;
+//   }
+//   h2 {
+//    color: #334454;
+//    font-size: 1.2rem;
+//   }
+//   p {
+//    color: #a1b2bc;
+//    font-size: 0.8rem;
+//   }
+//   p b {
+//    font-style: italic;
+//   }
+//  }
+// }
+// @media(max-width: 768px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
