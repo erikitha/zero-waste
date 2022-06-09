@@ -30,13 +30,16 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 90%;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-trip h2 {
@@ -49,6 +52,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: black;
 }
 
 
@@ -59,3 +63,8 @@
   align-items: flex-end;
   position: relative;
 }
+.cards-margim {
+  margin-bottom: 50px;
+}
+
+
