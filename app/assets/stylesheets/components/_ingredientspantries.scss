@@ -1,27 +1,28 @@
 .home-card {
-  background-color: white;
-  border: 2px solid #F99C80;
+  background-color: #fcf4cf41;
+  //border: 1px solid #F99C80;
   display: flex;
-  border-radius: 15%;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  color: $zw-red;
+  font-size: 10;
+  color: $zw-yellow;
   justify-content: center;
-  padding: 15px;
-  height: 100px;
-  width: 120px;
+  padding: 30px;
+  border-radius: 40px;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 130px;
+  width: 170px;
   p {
     margin: 0;
-    font-size: 12px;
   }
   i {
-    color: $zw-red;
+    color: $zw-yellow;
   }
 }
 
 .icon-big{
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .card-trip {
   // overflow: hidden;
@@ -65,5 +66,3 @@
 .cards-margim {
   margin-bottom: 50px;
 }
-
-
