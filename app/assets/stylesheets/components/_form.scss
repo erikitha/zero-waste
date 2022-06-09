@@ -1,3 +1,4 @@
+//Register forms
 .container-form {
   background: #FF5F6D;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -8,6 +9,44 @@
   padding: 10px 20px;
   margin-top: 50px;
   border-radius: 3px;
+
+  h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $zw-light;
+  }
+  .form-inputs {
+   color: $zw-light;
+   font-size: 16px;
+  }
+  .btn {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: $zw-green;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .form-control {
+    border-radius: 8px;
+  }
+}
+a {
+  text-decoration: none;
+  color: $zw-light;
+}
+
+//Ingredient_pantry forms
+.container-pantry {
+  //ver se coloca plano de fundo de frutinhas/comida
+  // background-image: url(https://as1.ftcdn.net/v2/jpg/02/00/75/30/1000_F_200753079_09314G3klkuaK1RJIsUKOpcjcxeo3tyt.jpg)
+  background: url('images/food_background01.jpeg');
+}
+.form-pantry {
+  padding: 10px 20px;
+  margin-top: 50px;
+  border-radius: 3px;
   h2 {
     font-size: 25px;
     font-weight: bold;
@@ -15,8 +54,21 @@
     text-align: center;
     color: $zw-orange;
   }
+  .form-inputs {
+   color: $zw-light;
+   font-size: 16px;
+  }
+  .form-labels {
+    color: $zw-light;
+    font-size: 16px;
+   }
   .btn {
     width: 100%;
     margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .form-control {
+    border-radius: 8px;
   }
 }
