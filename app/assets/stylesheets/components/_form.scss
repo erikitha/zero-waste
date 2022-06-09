@@ -35,8 +35,11 @@
 a {
   text-decoration: none;
   color: $zw-light;
+  opacity: 0.8;
 }
-
+a:hover {
+ color: $zw-light;
+}
 //Ingredient_pantry forms
 .container-pantry {
   //ver se coloca plano de fundo de frutinhas/comida
