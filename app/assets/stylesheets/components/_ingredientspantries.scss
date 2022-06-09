@@ -1,13 +1,45 @@
+.home-card {
+  background-color: #fcf4cf41;
+  //border: 1px solid #F99C80;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 10;
+  color: $zw-yellow;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 40px;
+  //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 130px;
+  width: 170px;
+  p {
+    margin: 0;
+  }
+  i {
+    color: $zw-yellow;
+  }
+}
+
+.icon-big{
+  font-size: 2rem;
+}
 .card-trip {
-  overflow: hidden;
+  // overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card-trip h2 {
@@ -20,6 +52,7 @@
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  color: black;
 }
 
 
@@ -30,10 +63,6 @@
   align-items: flex-end;
   position: relative;
 }
-
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.cards-margim {
+  margin-bottom: 50px;
 }

@@ -1,23 +1,20 @@
 <div class="background-home">
-  <div class="d-flex justify-content-between my-3 mx-3">
-    <div class="row">
-      <h1>Your Ingredients</h1>
-        <% @ingredients_pantries.each do |ingredients| %>
-          <div class= "col-4 mb-4">
-            <div class="card-product pl-4 mx-1">
-            <%# <% if ingredients_pantries.photo.attached? %>
-              <%# <%= cl_image_tag(ingredients_pantries.photo.key) %>
-            <%# <% else %>
-              <img src="https://images.pexels.com/photos/1655304/pexels-photo-1655304.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-            <%# <% end %>
-              <div class="card-product-infos">
-                <p><%=ingredients.ingredient.name %></p>
-                <%# <h2>Product name</h2>
-                <p>Product description with <strong>relevant info</strong> only.</p> %>
-              </div>
+  <h1>Ingredients</h1>
+  <div class="cards-margim">
+    <div class="card-trip">
+      <% @ingredients_pantries.each do |ingredients| %>
+      <div class= "col-4 mb-4">
+        <div class="card-product pl-4 mx-1">
+          <img src="https://images.pexels.com/photos/3673762/pexels-photo-3673762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <div class="card-product-infos">
+            <h2>Product name</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+            <div>
+              <p><%=ingredients.ingredient.name %></p>
             </div>
           </div>
-        <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
