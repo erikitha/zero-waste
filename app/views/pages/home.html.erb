@@ -1,39 +1,52 @@
-<div class="text-center margin-home">
-  <h5><strong>Hello User</strong></h5>
-</div>
-<div class="container container-home home-grid mb-5">
-  <%= link_to root_path, class: "link-home" do %>
-    <div class="home-card">
-      <i class="fas fa-user icon-big"></i>
-      <p class="mt-2">User</p>
+<div class="background-home">
+  <div class="background-logo">
+  </div>
+  <div class="container-grid">
+    <div class="text-center margin-home">
+      <h5><strong>Welcome!</strong></h5>
     </div>
-  <% end %>
-  <div class="home-card">
-    <i class="fas fa-upload icon-big"></i>
-    <p class="mt-2">Add new ingredient</p>
-  </div>
+    <div class="container home-grid">
+      <%= link_to root_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-user icon-big"></i>
+          <p class="mt-2">User</p>
+        </div>
+      <% end %>
 
-  <div class="home-card">
-   <i class="fas fa-archive icon-big"></i>
-    <p class="mt-2">Storage Recomentation</p>
-  </div>
+      <%= link_to new_ingredient_pantry_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-upload icon-big"></i>
+          <p class="mt-2">Add new ingredient</p>
+        </div>
+      <% end %>
 
-  <div class="home-card">
-   <i class="fas fa-clipboard-list icon-big"></i>
-    <p class="mt-2">Your food pantry</p>
-  </div>
+      <%= link_to root_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-archive icon-big"></i>
+          <p class="mt-2">Storage Recomendation</p>
+        </div>
+      <% end %>
 
-  <div class="home-card">
-    <i class="fas fa-book icon-big"></i>
-    <p class="mt-2">Recipes</p>
-  </div>
+      <%= link_to ingredient_pantries_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-clipboard-list icon-big"></i>
+          <p class="mt-2">Your food pantry</p>
+        </div>
+      <% end %>
 
-<div class="home-card">
-    <i class="fas fa-list icon-big"></i>
-    <p class="mt-2"><strong>Checklist</strong></p>
+      <%= link_to recipes_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-book icon-big"></i>
+          <p class="mt-2">Recipes</p>
+        </div>
+      <% end %>
+
+      <%= link_to root_path, class: "link-home" do %>
+        <div class="home-card">
+          <i class="fas fa-list icon-big"></i>
+          <p class="mt-2">Checklist</p>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div>
-<div class= "wave">
-  <%= image_tag "wave (1).svg", class: "wave-img-1"%>
-  <%= image_tag "wave.svg", class: "wave-img-2" %>
 </div>
