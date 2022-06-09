@@ -2,8 +2,8 @@ require "json"
 require "open-uri"
 
 Dotenv.load
-# Recipe.destroy_all
-# Ingredient.destroy_all
+Recipe.destroy_all
+Ingredient.destroy_all
 
 api_key_recipe = ENV['SPOONACULAR']
 api_key_ingredient = ENV['SPOONACULAR2']
@@ -13,16 +13,21 @@ number = 5 #numero de consulta da receita
 
 #recipe
 url = "https://api.spoonacular.com/recipes/complexSearch?apiKey=#{api_key_recipe}&number=#{number}&offset=#{offset}" #url da receita
+# add id da receita (migration)
+
 recipes = URI.open(url).read
 recipes_response = JSON.parse(recipes)
 
 recipes_response["results"].each do |recipe|
-  recipe_url = "https://api.spoonacular.com/recipes/#{recipe['id']}/information?apiKey=#{api_key_recipe}"
+  recipe_url = "https://api.spoonacular.com/recipes/#{recipe['id']}/information?apiKey=#{api_key_recipe}" #volta um info response para cada receita
   recipes_info = URI.open(recipe_url).read
   info_response = JSON.parse(recipes_info)
 
 
-  Recipe.create!(name: recipe["title"], prep_time:  info_response["preparationMinutes"], description: info_response["summary"], url_image: recipe["image"])
+  Recipe.create!(name: recipe["title"], prep_time:  info_response["preparationMinutes"], description: info_response["summary"], url_image: recipe["image"], spoon_url: info_response["sourceUrl"], spoon_id: info_response["id"])
+  # add id da receita (migration)
+
+
   puts recipe["title"]
   # puts recipe["id"]
 
