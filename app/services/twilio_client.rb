@@ -1,28 +1,29 @@
 class TwilioClient
   attr_reader :client
 
-def initialize
-  @client = Twilio::REST::Client.new account_sid, auth_token
-end
+  def initialize
+    @client = Twilio::REST::Client.new(account_sid, auth_token)
+  end
 
-def send_text(user, message)
-  client.api.account.messages.create(
-    from: user.phone,
-    to: phone_number,
-    body: message
-  )
-  # @client.messages.create(
-end
-private
+  def send_text(user, message)
+    client.api.account.messages.create(
+      from: phone_number,
+      to: user.phone,
+      body: message
+    )
+    # @client.messages.create(
+  end
+  private
 
-def account_sid
-  Rails.application.credentials.twilio(:account_sid)
-end
+  def account_sid
+    ENV["ACCOUNT_SID"]
+  end
 
-def auth_token
-  Rails.application.credentials.twilio(:auth_token)
-end
+  def auth_token
+    ENV["AUTH_TOKEN"]
+  end
 
-def phone_number
-  Rails.application.credentials.twilio(:phone_number)
+  def phone_number
+    ENV["PHONE_NUMBER"]
+  end
 end
