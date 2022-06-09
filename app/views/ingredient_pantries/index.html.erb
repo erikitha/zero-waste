@@ -1,13 +1,23 @@
+<div class="background-home">
+
 <h1>Your Ingredients</h1>
 <div class="list-user-ingredients">
-  <% @ingredients_pantries.each do |ingredients| %>
+  <%# <% @expiring.each do |ingredients| %>
+
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <p><%=ingredients.ingredient.name %></p>
+      <% @ingredients_pantries.each do |ingredients| %>
+      <div class= "col-4 mb-4">
+        <div class="card-product pl-4 mx-1">
+          <img src="https://images.pexels.com/photos/3673762/pexels-photo-3673762.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <div class="card-product-infos">
+            <h2>Product name</h2>
+            <p>Product description with <strong>relevant info</strong> only.</p>
+            <div>
+              <p><%=ingredients.ingredient.name %></p>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>

@@ -40,3 +40,6 @@ yarn-debug.log*
 *.swp
 .DS_Store
 .env*
+.env*
+
+/config/credentials/development.key
