@@ -1,7 +1,15 @@
 class IngredientPantriesController < ApplicationController
 
   def index
-    @ingredients_pantries = IngredientPantry.where(user: current_user)
+    ingredients_pantries = IngredientPantry.where(user: current_user)
+    @expiring = ingredients_pantries.reject do |ingredient|
+      ingredient.best_before - Date.today >= 2
+    end
+    @valid = ingredients_pantries.select do |ingredient|
+      ingredient.best_before - Date.today >= 2
+    end
+    # TwilioClient.new.send_text(current_user, "You have ingredients expiring in your storage!") unless @expiring.empty?
+    # Semana que vem fazer um background job para verificar se está chegando os produtos na validade 1x por dia
   end
 
   def new
