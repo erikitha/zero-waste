@@ -1,6 +1,10 @@
 <div class="background-home">
   <div class="card-trip">
-    <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+    <% if @recipe.url_image.present? %>
+      <%= image_tag(@recipe.url_image) %>
+    <% else %>
+      <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+    <% end %>
     <div class="card-trip-infos">
       <div>
         <h1>Recipe</h1>

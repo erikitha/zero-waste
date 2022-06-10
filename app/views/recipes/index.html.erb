@@ -11,7 +11,11 @@
     <% @recipes.each do |recipe|%>
       <%= link_to recipe_path(recipe) do %>
         <div class="card-trip">
+        <% if recipe.url_image.present? %>
+          <%= image_tag(recipe.url_image) %>
+        <% else %>
           <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+        <% end %>
           <div class="card-trip-infos">
             <div class="infos">
               <p><%= recipe.name%></p>
