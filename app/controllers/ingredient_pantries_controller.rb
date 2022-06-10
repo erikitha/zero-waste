@@ -1,8 +1,8 @@
 class IngredientPantriesController < ApplicationController
 
   def index
-    @ingredients_pantries = IngredientPantry.where(user: current_user)
-    @expiring = @ingredients_pantries.reject do |ingredient|
+    ingredients_pantries = IngredientPantry.where(user: current_user)
+    @expiring = ingredients_pantries.reject do |ingredient|
       ingredient.best_before - Date.today >= 2
     end
     @valid = @ingredients_pantries.select do |ingredient|

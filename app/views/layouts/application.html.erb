@@ -17,7 +17,7 @@
     <%= yield %>
     <%= render 'shared/footer' if action_name == "home" %>
 
-    <%= render 'shared/navbar' %>
+    <%= render 'shared/navbar' unless action_name == "home" %>
 
   </body>
 </html>

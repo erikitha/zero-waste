@@ -6,5 +6,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
 
-  validates :phone, phone: true
+  validates :phone, presence: true
 end

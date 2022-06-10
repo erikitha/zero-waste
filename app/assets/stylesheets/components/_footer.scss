@@ -3,14 +3,14 @@
   flex-direction: column;
   background:  rgb(249, 156, 128);
   align-items: center;
-  height: 120px;
+  height: 130px;
   width: 100%;
   bottom: 0;
   left: 0;
   padding: 0px 50px;
   color: rgb(253, 252, 252);
   margin-top: auto;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 .footer-links {
   display: flex;
@@ -18,10 +18,9 @@
 }
 .footer-links a {
   color:#ede6c9;
-  opacity: 0.15;
   text-decoration: none;
   font-size: 24px;
-  padding: 0px 10px;
+  padding: 0px 8px;
 }
 .footer-links a:hover {
   opacity: 1;
