@@ -1,15 +1,17 @@
-<div class="cards-margim">
-  <% @recipes.each do |recipe|%>
-    <%= link_to recipe_path(recipe) do %>
-      <div class="card-trip">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <div class="card-trip-infos">
-          <div class="infos">
-            <p><%= recipe.name%></p>
-            <p><%= recipe.prep_time%></p>
+<div class="background-home">
+  <div class="cards-margim">
+    <% @recipes.each do |recipe|%>
+      <%= link_to recipe_path(recipe) do %>
+        <div class="card-trip">
+          <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+          <div class="card-trip-infos">
+            <div class="infos">
+              <p><%= recipe.name%></p>
+              <p><%= recipe.prep_time%></p>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 </div>
