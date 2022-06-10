@@ -5,7 +5,7 @@
   <%# @expiring.each do |ingredients|%>
   <div class="cards-margim">
     <div class="card-trip">
-      <% @expiring.each do |ingredients| %>
+      <% @ingredients_pantries.each do |ingredients| %>
           <%# <div class="card-product pl-4 mx-1"> %>
           <% if ingredients.ingredient.image_url.present? %>
             <%= image_tag(ingredients.ingredient.image_url) %>
