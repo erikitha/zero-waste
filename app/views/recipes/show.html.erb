@@ -1,16 +1,21 @@
 <div class="background-home">
-  <h1> Recipe </h1>
-  <div class="cards-margim">
-    <div class="card-trip">
-      <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="mt-3"/>
-        <div class="card-trip-infos">
-          <div class="infos">
-            <p><%= @recipe.name%></p>
-            <p><%= @recipe.prep_time%></p>
-            <p><%= @recipe.description%></p>
-            <p><%= @recipe.spoon_url%></p>
+  <div class="card-trip">
+    <img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+    <div class="card-trip-infos">
+      <div>
+        <h1>Recipe</h1>
+        <div class="cards-margim">
+          <div class="card-trip-center">
+              <div class="card-trip-infos-center mt-4">
+                <div class="infos" text>
+                  <p><%= @recipe.name%></p>
+                  <p><%= @recipe.prep_time%></p>
+                  <p><%= @recipe.description%></p>
+                  <a class="btn btn-ghost mt-5" href="https://spoonacular.com/#{@recipe.name}">Go to Recipe</a>
+                </div>
+              </div>
           </div>
         </div>
-    </div>
+      </div>
   </div>
 </div>
