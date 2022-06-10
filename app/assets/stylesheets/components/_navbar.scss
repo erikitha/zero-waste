@@ -1,6 +1,8 @@
 .navbar-zerowaste {
   background: white;
   margin-top: auto;
+  bottom: 0;
+  position: fixed;
   width: 100%;
   height: 50px;
   padding: 0 1rem;
@@ -43,4 +45,3 @@
 .far {
  color: rgb(255, 194, 134);
 }
-
