@@ -1,7 +1,7 @@
 require "json"
 require "open-uri"
 
-Dotenv.load
+# Dotenv.load
 Recipe.destroy_all
 Ingredient.destroy_all
 
