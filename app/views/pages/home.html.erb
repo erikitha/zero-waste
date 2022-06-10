@@ -4,7 +4,11 @@
   </div>
   <div class="container-grid">
     <div class="text-center margin-home">
+    <% if current_user %>
+      <h5><strong>Hello, <%= @name[0] %>!</strong></h5>
+    <% else %>
       <h5><strong>Welcome!</strong></h5>
+    <% end %>
     </div>
     <div class="container home-grid">
       <% if not current_user%>
