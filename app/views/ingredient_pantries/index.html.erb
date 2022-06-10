@@ -8,7 +8,11 @@
     <div class="card-trip">
       <% @ingredients_pantries.each do |ingredients| %>
           <%# <div class="card-product pl-4 mx-1"> %>
-            <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg" />
+          <% if ingredients.ingredient.image_url.present? %>
+            <%= image_tag(ingredients.ingredient.image_url) %>
+          <% else %>
+            <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+          <% end %>
             <div class="card-product-infos">
               <h2>Product name</h2>
               <p>Product description with <strong>relevant info</strong> only.</p>
