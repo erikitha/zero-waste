@@ -44,34 +44,40 @@ a:hover {
 .container-pantry {
   //ver se coloca plano de fundo de frutinhas/comida
   // background-image: url(https://as1.ftcdn.net/v2/jpg/02/00/75/30/1000_F_200753079_09314G3klkuaK1RJIsUKOpcjcxeo3tyt.jpg)
-  background: url('images/food_background01.jpeg');
+  background-image: url('bg-zero-waste.png');
+  background-size: auto;
+  height: 100vh;
+  opacity: 0,1;
 }
 .form-pantry {
   padding: 10px 20px;
-  margin-top: 50px;
-  border-radius: 3px;
+  margin: 100px 20px 0 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h2 {
     font-size: 25px;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin: 30px 0;
     text-align: center;
     color: $zw-orange;
   }
   .form-inputs {
-   color: $zw-light;
-   font-size: 16px;
-  }
-  .form-labels {
     color: $zw-light;
     font-size: 16px;
+  }
+  .form-labels {
+    font-size: 16px;
    }
+  .form-control {
+    border-radius: 8px;
+  }
+  .form-select {
+    border-radius: 8px;
+  }
   .btn {
     width: 100%;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    font-weight: bold;
-  }
-  .form-control {
+    margin: 20px 0;
     border-radius: 8px;
   }
 }
