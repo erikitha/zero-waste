@@ -1,33 +1,19 @@
-<%= form_tag recipes_path, method: :get, class: "simple_form search" do %>
-  <div class="search-form-control form-group">
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control string required",
-      placeholder: "Find a Recipe"
-    %>
-    <button name="button" type="submit" class="btn btn-flat">
-      <i class="fas fa-search"></i> Search
-    </button>
-  </div>
-<% end %>
-<div class="background-home">
-  <div class="cards-margim">
-    <% @recipes.each do |recipe|%>
-      <%= link_to recipe_path(recipe) do %>
-        <div class="card-trip">
-        <% if recipe.url_image.present? %>
-          <%= image_tag(recipe.url_image) %>
-        <% else %>
-          <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
-        <% end %>
-          <div class="card-trip-infos">
-            <div class="infos">
-              <p><%= recipe.name%></p>
-              <p><%= recipe.prep_time%></p>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+<div data-controller="search">
+  <%= form_tag recipes_path, method: :get, class: "simple_form search", data: { search_target: "form" } do %>
+    <div class="search-form-control form-group">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control string required",
+        placeholder: "Find a Recipe",
+        data: { search_target: "input", action: "input->search#update" }
+      %>
+      <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  <% end %>
+  <div class="background-home">
+    <%= render "recipe_infos", recipes: @recipes %>
   </div>
 </div>
+
