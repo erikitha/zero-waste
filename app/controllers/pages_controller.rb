@@ -4,4 +4,7 @@ class PagesController < ApplicationController
   def home
     # @name = current_user.name.split(" ")
   end
+
+  def profile
+  end
 end
