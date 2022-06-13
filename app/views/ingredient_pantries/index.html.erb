@@ -1,5 +1,16 @@
 <div class="background-home">
-
+<%= form_tag  ingredient_pantries_path, method: :get, class: "simple_form search" do %>
+  <div class="search-form-control form-group">
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control string required",
+      placeholder: "Find an Ingredient"
+    %>
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> Search
+    </button>
+  </div>
+<% end %>
 <h1>Your Ingredients</h1>
 <div class="list-user-ingredients">
   <%# @expiring.each do |ingredients|%>

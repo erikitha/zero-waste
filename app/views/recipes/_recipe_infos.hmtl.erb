@@ -1,0 +1,20 @@
+<div class="search-recipes" data-controller="edit-movie" data-edit-movie-target="card">
+<%# agora precisasmos definir nossos targets!! %>
+  <%= image_tag movie.image_url %>
+<%# temos aqui tambem um outro target que é O EDIT DO NOSSO MOVIE FORM %>
+<%# esses targets serao as infos de cada filme %>
+  <div class="movie-infos <%= 'd-none' if movie.errors.any? %>" data-edit-movie-target="infos">
+    <h2><%= movie.title %> <small>(<%= movie.year %>)</small></h2>
+<%# aqui tb tem nosso action que sera quando clicar no icone ele vai display No form %>
+    <i class="fas fa-pen fa-xs ml-2" data-action="click->edit-movie#displayForm"></i>
+  </div>
+
+  <%= simple_form_for movie, html: {  class: movie.errors.any? ? '' : 'd-none',
+    data: { edit_movie_target: 'form', action: 'submit->edit-movie#update' } } do |f| %>
+    <%= f.input :title %>
+    <%= f.input :year %>
+    <%= f.submit "Update movie", class: "btn btn-sm btn-primary btn-block mt-2" %>
+  <% end %>
+</div>
+
+<%# SLIDE %>
