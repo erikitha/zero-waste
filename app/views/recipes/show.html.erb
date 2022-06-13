@@ -13,9 +13,9 @@
               <div class="card-trip-infos-center mt-4">
                 <div class="infos" text>
                   <p><%= @recipe.name%></p>
-                  <p><%= @recipe.prep_time%></p>
+                  <p><%= @recipe.prep_time%> min</p>
                   <p><%= @recipe.description.html_safe%></p>
-                  <a class="btn btn-ghost mt-5" href="https://spoonacular.com/#{@recipe.name}" target="blank">Go to Recipe</a>
+                  <a class="btn btn-ghost mt-5" href="https://spoonacular.com/#{@recipe.name}">Go to Recipe</a>
                 </div>
               </div>
           </div>
