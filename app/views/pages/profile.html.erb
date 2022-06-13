@@ -5,7 +5,11 @@
         <div class="card shadow-sm">
           <div class="card-header bg-transparent text-center mb-2">
             <h3>Edit profile</h3>
-            <img src="https://source.unsplash.com/600x300/?student" alt="student dp"  class="img-cirlce" style="width:100%" >
+            <% if current_user.photo.key %>
+              <%= cl_image_tag current_user.photo.key, height: 250, width: 250, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
           </div>
         </div>
       </div>
@@ -19,17 +23,17 @@
               <tr>
                 <th width="30%">Name</th>
                 <td width="2%">:</td>
-                <td>Fulano</td>
+                <td><%= current_user.name %></td>
               </tr>
               <tr>
                 <th width="30%">email</th>
                 <td width="2%">:</td>
-                <td>email@email.com</td>
+                <td><%= current_user.email %></td>
               </tr>
               <tr>
                 <th width="30%">phone number</th>
                 <td width="2%">:</td>
-                <td>........</td>
+                <td><%= current_user.phone %></td>
               </tr>
             </table>
           </div>
