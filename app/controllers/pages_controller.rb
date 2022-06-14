@@ -6,4 +6,7 @@ class PagesController < ApplicationController
      @name = current_user.name.split(" ")
     end
   end
+
+  def profile
+  end
 end

@@ -1,0 +1,12 @@
+<div class="card-trip" data-search-target="list">
+  <% expiring.each do |ingredients| %>
+    <% if ingredients.ingredient.image_url.present? %>
+      <%= image_tag(ingredients.ingredient.image_url) %>
+    <% else %>
+      <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+    <% end %>
+    <div class="card-product-infos mb-5">
+      <h2><%=ingredients.ingredient.name %></h2>
+    </div>
+  <% end %>
+</div>
