@@ -1,19 +1,14 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: [ :show, :edit, :update, :destroy ]
+  before_action :set_task, except: %i[index create complete]
 
   def index
     @tasks = Task.all
-  end
-
-  def show
-  end
-
-  def new
     @task = Task.new
   end
 
   def create
     task = Task.new(task_params)
+    task.user = current_user
     task.save
     redirect_to tasks_path
   end
@@ -23,11 +18,18 @@ class TasksController < ApplicationController
 
   def update
     @task.update(task_params)
-    redirect_to task_path(@task)
+    redirect_to tasks_path
   end
 
   def destroy
     @task.destroy
+    redirect_to tasks_path
+  end
+
+  def complete
+    @task = Task.find(params[:task_id])
+    @task.completed = !@task.completed
+    @task.save
     redirect_to tasks_path
   end
 
@@ -38,6 +40,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :details, :completed)
+    params.require(:task).permit(:title, :completed)
   end
 end
