@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2022_06_14_193722) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_06_14_193722) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+
   create_table "favorite_recipes", force: :cascade do |t|
     t.bigint "recipe_id", null: false
     t.bigint "user_id", null: false
@@ -51,6 +54,7 @@ ActiveRecord::Schema.define(version: 2022_06_14_193722) do
     t.index ["recipe_id"], name: "index_favorite_recipes_on_recipe_id"
     t.index ["user_id"], name: "index_favorite_recipes_on_user_id"
   end
+
 
   create_table "ingredient_pantries", force: :cascade do |t|
     t.date "best_before"
@@ -90,6 +94,14 @@ ActiveRecord::Schema.define(version: 2022_06_14_193722) do
     t.string "url_image"
     t.integer "spoon_id"
     t.string "spoon_url"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.boolean "completed", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
