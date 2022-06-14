@@ -14,7 +14,7 @@
                 <div class="infos" text>
                   <p><%= @recipe.name%></p>
                   <p><%= @recipe.prep_time%></p>
-                  <p><%= @recipe.description%></p>
+                  <p><%= @recipe.description.html_safe%></p>
                   <a class="btn btn-ghost mt-5" href="https://spoonacular.com/#{@recipe.name}" target=”_blank”>Go to Recipe</a>
                 </div>
               </div>
