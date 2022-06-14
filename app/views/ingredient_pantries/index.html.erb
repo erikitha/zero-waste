@@ -1,29 +1,23 @@
-<div class="background-home">
-
-<h1>Your Ingredients</h1>
-<div class="list-user-ingredients">
-  <%# @expiring.each do |ingredients|%>
-  <div class="cards-margim">
-    <div class="card-trip">
-      <% @ingredients_pantries.each do |ingredients| %>
-          <%# <div class="card-product pl-4 mx-1"> %>
-          <% if ingredients.ingredient.image_url.present? %>
-            <%= image_tag(ingredients.ingredient.image_url) %>
-          <% else %>
-            <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
-          <% end %>
-            <div class="card-product-infos">
-              <h2>Product name</h2>
-              <p>Product description with <strong>relevant info</strong> only.</p>
-              <div>
-                <p><%=ingredients.ingredient.name %></p>
-              </div>
-            </div>
-          <%# </div> %>
-      <% end %>
+<div data-controller="search" class="background-home">
+  <%= form_tag  ingredient_pantries_path, method: :get, class: "simple_form search", data: { search_target: "form" } do %>
+    <div class="search-form-control form-group">
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control string required",
+        placeholder: "Find an Ingredient",
+        data: { search_target: "input", action: "input->search#update" }
+      %>
+      <button name="button" type="submit" class="btn btn-flat">
+        <i class="fas fa-search"></i> Search
+      </button>
     </div>
-  </div>
-   <%# end %>
+  <% end %>
+
+  <h1>Your Ingredients</h1>
+  <div class="list-user-ingredients">
+    <div class="cards-margim">
+      <%= render "ingredient_infos", expiring: @expiring %>
+    </div>
 </div>
 
 <%# <div class="card-trip">
