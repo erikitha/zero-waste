@@ -7,7 +7,13 @@ Rails.application.routes.draw do
   end
 
   resources :favorite_recipes, only: [:destroy]
+  resources :ingredient_pantries, except: :show
+  resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
+  get "landing", to: "pages#landing"
+  resources :tasks, except: [:show, :new] do
+    patch "complete", to: "tasks#complete"
+  end
   get "yourfavorite", to: "pages#yourfavorite"
 
 

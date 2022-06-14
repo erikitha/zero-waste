@@ -4,6 +4,7 @@ class User < ApplicationRecord
   has_many :ingredient_pantries
   has_many :favorite_recipes
   has_many :recipes, through: :favorite_recipes
+  has_many :tasks
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
