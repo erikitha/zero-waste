@@ -1,5 +1,6 @@
-<div data-controller="search" class="background-home">
-  <%= form_tag  ingredient_pantries_path, method: :get, class: "simple_form search", data: { search_target: "form" } do %>
+<div data-controller="search" class="pt-5">
+
+  <%= form_tag  ingredient_pantries_path, method: :get, class: "simple_form search css-form", data: { search_target: "form" } do %>
     <div class="search-form-control form-group">
       <%= text_field_tag :query,
         params[:query],
@@ -13,10 +14,12 @@
     </div>
   <% end %>
 
-  <h1>Your Ingredients</h1>
-  <div class="list-user-ingredients">
+  <div class="background-logo">
+    <h1 class= "mt-3"> Your Ingredients</h1>
+  </div>
+  <div class="list-user-ingredients mb-5">
     <div class="cards-margim">
-      <%= render "ingredient_infos", expiring: @expiring %>
+      <%= render "ingredient_infos", ingredients: @ingredients_pantries %>
     </div>
 </div>
 

@@ -1,0 +1,17 @@
+<%# div class="container-pantry" %>
+<div class="background-home">
+  <div class="row justify-content-center">
+    <div class="col-12">
+      <div class="form-pantry">
+        <h2><strong>Add An Ingredient :</strong></h2>
+        <%= simple_form_for @ingredient_pantry, html: { class: "letter-h3" }  do |f| %>
+          <%= f.input :best_before %>
+          <%= f.input :lot %>
+          <%= f.input :quantity %>
+          <%= f.association :ingredient %>
+          <%= f.submit class: 'btn btn-warning w-100' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

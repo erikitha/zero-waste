@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :ingredient_pantries, only: [:index, :new, :create, :destroy, :edit]
+  resources :ingredient_pantries, except: :show
   resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
+  get "landing", to: "pages#landing"
   # resource :basket, only: [:show, :update, :destroy]
 
   # resolve("Basket") { route_for(:basket) }
