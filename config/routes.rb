@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :ingredient_pantries, only: [:index, :new, :create, :destroy]
   resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
+  resources :tasks
   # resource :basket, only: [:show, :update, :destroy]
 
   # resolve("Basket") { route_for(:basket) }
