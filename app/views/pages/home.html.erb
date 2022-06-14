@@ -4,30 +4,28 @@
   </div>
   <div class="container-grid">
     <div class="text-center margin-home">
+    <% if current_user %>
+      <h5><strong>Hello, <%= @name[0] %>!</strong></h5>
+    <% else %>
       <h5><strong>Welcome!</strong></h5>
+    <% end %>
     </div>
     <div class="container home-grid">
-     <%= link_to new_user_session_path, class: "link-home" do %>
-        <div class="home-card">
-          <i class="fas fa-user icon-big"></i>
-          <p class="mt-2">Profile</p>
-        </div>
-      <% end %>
-      <%# <% if not current_user%>
-        <%# <%= link_to new_user_session_path, class: "link-home" do %>
-          <%# <div class="home-card">
+      <% if current_user%>
+        <%= link_to profile_path, class: "link-home" do %>
+          <div class="home-card">
             <i class="fas fa-user icon-big"></i>
             <p class="mt-2">Profile</p>
-          </div> %>
-        <%# <% end %>
-      <%# <% else %>
-        <%# <%= link_to destroy_user_session_path, method: :delete, class: "link-home" do %>
-          <%# <div class="home-card">
-            <i class="fas fa-user-alt-slash icon-big"></i>
-            <p class="mt-2">Logout</p>
-          </div> %>
-        <%# <% end %>
-      <%# <% end %>
+          </div>
+         <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "link-home" do %>
+          <div class="home-card">
+            <i class="fas fa-user icon-big"></i>
+            <p class="mt-2">Login</p>
+          </div>
+         <% end %>
+       <% end %>
 
       <%= link_to new_ingredient_pantry_path, class: "link-home" do %>
         <div class="home-card">

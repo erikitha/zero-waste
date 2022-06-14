@@ -1,0 +1,44 @@
+<div class="profile py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center mb-2">
+            <h3>Edit profile</h3>
+            <% if current_user.photo.key %>
+              <%= cl_image_tag current_user.photo.key, height: 250, width: 250, crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% else %>
+              <%= image_tag "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-3 mt-3"><i class="far fa-clone pr-1"></i>General Information</h3>
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">Name</th>
+                <td width="2%">:</td>
+                <td><%= current_user.name %></td>
+              </tr>
+              <tr>
+                <th width="30%">email</th>
+                <td width="2%">:</td>
+                <td><%= current_user.email %></td>
+              </tr>
+              <tr>
+                <th width="30%">phone number</th>
+                <td width="2%">:</td>
+                <td><%= current_user.phone %></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

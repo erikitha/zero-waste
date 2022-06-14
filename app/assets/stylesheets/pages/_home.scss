@@ -1,9 +1,8 @@
 .background-home {
   background-image: url("bg-zero-waste.png");
   background-size: cover;
-  height: 100vh;
+  height: 180vh;
   opacity: 0,3;
-
 }
 
 .background-logo {
@@ -20,8 +19,9 @@
   background-color:white;
   top: 150px;
   width: 81%;
-  height: 58vh;
-  left: 10%;
+  height: 64.5vh;
+  left: 9%;
+  border-radius: 3%;
   box-shadow: 5px 10px 15px rgba(0,0,0,0.2);
   h5 {
     color: $zw-red;

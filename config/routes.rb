@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :ingredient_pantries, only: [:index, :new, :create, :destroy, :edit]
   resources :recipes, only: [:show, :index]
-
+  get "profile", to: "pages#profile"
   # resource :basket, only: [:show, :update, :destroy]
 
   # resolve("Basket") { route_for(:basket) }
