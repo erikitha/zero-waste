@@ -15,5 +15,6 @@ class PagesController < ApplicationController
   end
 
   def yourfavorite
+    @recipes = current_user.recipes
   end
 end

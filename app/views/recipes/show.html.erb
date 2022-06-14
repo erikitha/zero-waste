@@ -7,18 +7,34 @@
     <% end %>
     <div class="card-trip-infos">
       <div>
-        <h1>Recipe</h1>
+        <div class="d-flex justify-content-between">
+          <h2>Recipe</h2>
+            <% if current_user.recipes.where(id: @recipe.id).present?%>
+              <%= link_to favorite_recipe_path(current_user.favorite_recipes.find_by(recipe: @recipe)), method: :delete, remote: true do %>
+                <i class="fas fa-heart icon-big"></i>
+              <% end %>
+            <% else %>
+              <%= link_to recipe_favorite_recipes_path(@recipe), method: :post, remote: true do %>
+                <i class="far fa-heart"></i>
+              <% end %>
+            <% end %>
+        </div>
         <div class="cards-margim">
           <div class="card-trip-center">
-              <div class="card-trip-infos-center mt-4">
-                <div class="infos" text>
-                  <p><%= @recipe.name%></p>
-                  <p><%= @recipe.description.html_safe%></p>
-                  <a class="btn btn-ghost mt-5" href="https://spoonacular.com/#{@recipe.name}" target=”_blank”>Go to Recipe</a>
-                </div>
+            <div class="card-trip-infos-center mt-4">
+            <div class="text-start">
+              <div class="infos" text>
+                <p><%= @recipe.name%></p>
+                <p><%= @recipe.description.html_safe%></p>
               </div>
+            </div>
+              <div>
+                <a class="btn btn-ghost mt-4" href="https://spoonacular.com/#{@recipe.name}" target=”_blank”>Go to Recipe</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </div>
   </div>
 </div>
