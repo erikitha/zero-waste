@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :tasks, except: [:show, :new] do
     patch "complete", to: "tasks#complete"
   end
+  get "yourfavorite", to: "pages#yourfavorite"
+
   # resource :basket, only: [:show, :update, :destroy]
 
   # resolve("Basket") { route_for(:basket) }
