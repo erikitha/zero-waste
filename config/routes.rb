@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :ingredient_pantries, only: [:index, :new, :create, :destroy]
   resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
+  resources :tasks, except: [:show, :new] do
+    patch "complete", to: "tasks#complete"
+  end
   get "yourfavorite", to: "pages#yourfavorite"
 
   # resource :basket, only: [:show, :update, :destroy]
