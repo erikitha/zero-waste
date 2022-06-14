@@ -31,9 +31,22 @@ class IngredientPantriesController < ApplicationController
       @ingredient_pantry.destroy
       redirect_to ingredient_pantries_path
     end
+
+    def update
+      @ingredient_pantry = IngredientPantry.find(params[:id])
+      if @ingredient_pantry.update(ingredient_pantries_params)
+        redirect_to ingredient_pantries_path
+      else
+        render :edit
+      end
+    end
+
+    def edit
+      @ingredient_pantry = IngredientPantry.find(params[:id])
+    end
   end
 
-  private
+    private
 
   def ingredient_pantries_params
     params.require(:ingredient_pantry).permit(:ingredient_id, :best_before, :lot, :quantity)
