@@ -9,4 +9,7 @@ class PagesController < ApplicationController
 
   def profile
   end
+
+  def yourfavorite
+  end
 end
