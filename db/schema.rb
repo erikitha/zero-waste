@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_14_144057) do
+
+ActiveRecord::Schema.define(version: 2022_06_14_193722) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +44,17 @@ ActiveRecord::Schema.define(version: 2022_06_14_144057) do
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
+
+
+  create_table "favorite_recipes", force: :cascade do |t|
+    t.bigint "recipe_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_favorite_recipes_on_recipe_id"
+    t.index ["user_id"], name: "index_favorite_recipes_on_user_id"
+  end
+
 
   create_table "ingredient_pantries", force: :cascade do |t|
     t.date "best_before"
@@ -107,6 +120,8 @@ ActiveRecord::Schema.define(version: 2022_06_14_144057) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "favorite_recipes", "recipes"
+  add_foreign_key "favorite_recipes", "users"
   add_foreign_key "ingredient_pantries", "ingredients"
   add_foreign_key "ingredient_pantries", "users"
   add_foreign_key "recipe_ingredients", "ingredients"
