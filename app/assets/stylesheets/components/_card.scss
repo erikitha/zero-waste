@@ -104,6 +104,20 @@
   margin-right: auto;
 }
 
+.card-checklist-edit {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 350px;
+  height: 600px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .add-fav {
   position: absolute;
   right: 16px;
