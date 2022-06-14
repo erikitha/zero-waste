@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
   get "landing", to: "pages#landing"
+  resources :tasks, except: [:show, :new] do
+    patch "complete", to: "tasks#complete"
+  end
+  get "yourfavorite", to: "pages#yourfavorite"
+
   # resource :basket, only: [:show, :update, :destroy]
 
   # resolve("Basket") { route_for(:basket) }

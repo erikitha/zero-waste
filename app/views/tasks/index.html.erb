@@ -1,0 +1,29 @@
+<h1>Checklist</h1>
+
+<%= simple_form_for @task, remote: true, html: { class: "search" } do |f| %>
+  <div class="search-form-control form-group">
+    <%= f.input :title, label: false, wrapper: false, placeholder: "New Task" %>
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-plus"></i> Add
+    </button>
+  </div>
+<% end %>
+
+<ul id="tasks">
+  <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task_complete_path(task), method: :patch, remote: true do %>
+        <% if task.completed %>
+          <i class="far fa-check-square"></i>
+        <% else %>
+          <i class="far fa-square"></i>
+        <% end %>
+      <% end %>
+      <%= link_to task.title, edit_task_path(task) %>
+
+      <%= link_to task_path(task.id), method: :delete, data: { confirm: "Delete #{task.title}?" } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

@@ -27,7 +27,7 @@ class IngredientPantriesController < ApplicationController
     @ingredient_pantry.user = current_user
 
     if @ingredient_pantry.save
-      redirect_to ingredient_pantries_path, notice: 'Ingredient was successfully created.'
+      redirect_to ingredient_pantries_path, notice: 'Ingredient was successfully created!'
     else
       render :new
     end
