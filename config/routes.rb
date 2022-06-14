@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   end
 
   resources :favorite_recipes, only: [:destroy]
+  resources :ingredient_pantries, except: :show
+  resources :recipes, only: [:show, :index]
 
   resources :ingredient_pantries, except: :show
   resources :recipes, only: [:show, :index]
