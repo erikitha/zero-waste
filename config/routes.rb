@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
   resources :ingredient_pantries, only: [:index, :new, :create, :destroy]
   resources :recipes, only: [:show, :index] do
     resources :favorite_recipes, only: [:create]
@@ -9,6 +10,10 @@ Rails.application.routes.draw do
   resources :favorite_recipes, only: [:destroy]
   resources :ingredient_pantries, except: :show
   resources :recipes, only: [:show, :index]
+
+  resources :ingredient_pantries, except: :show
+  resources :recipes, only: [:show, :index]
+
   get "profile", to: "pages#profile"
   get "landing", to: "pages#landing"
   resources :tasks, except: [:show, :new] do

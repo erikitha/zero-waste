@@ -1,5 +1,42 @@
 #tasks {
+  margin-top: 20px;
   a {
-    color: red;
+color: #383f39;
+
+  }
+}
+
+#tasks {
+  li {
+text-decoration: none;
+list-style-type: none;
+text-decoration-style: none;
+  }
+}
+
+#tasks {
+  .fas {
+  margin-right: 5px;
+
+  }
+}
+
+#tasks {
+  .far {
+  margin-right: 5px;
+
+  }
+}
+
+
+#tasks {
+  .fa-trash-alt{
+  font-size: 14px;
+  }
+}
+
+.search-form-control{
+  .btn {
+    border-radius: 20px;
   }
 }

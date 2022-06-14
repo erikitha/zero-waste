@@ -93,11 +93,24 @@
 }
 
 
+.card-checklist {
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  width: 300px;
+  height: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .add-fav {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -161,4 +174,7 @@
   color: red;
   font-weight: bold;
 }
+
+#task_title {
+  border-radius: 10px 10px 0 0;
 }
