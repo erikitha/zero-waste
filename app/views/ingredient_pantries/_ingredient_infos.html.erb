@@ -1,12 +1,24 @@
-<div class="card-trip" data-search-target="list">
-  <% expiring.each do |ingredients| %>
-    <% if ingredients.ingredient.image_url.present? %>
-      <%= image_tag(ingredients.ingredient.image_url) %>
-    <% else %>
-      <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
-    <% end %>
-    <div class="card-product-infos mb-5">
-      <h2><%=ingredients.ingredient.name %></h2>
+<div class="container-products" data-search-target="list">
+  <% ingredients.each_with_index do |ingredient, index| %>
+    <div class= "card-product" id=<%='card-product-margin' if ingredients.length - 1 == index %>>
+      <% if ingredient.ingredient.image_url.present? %>
+        <%= image_tag(ingredient.ingredient.image_url) %>
+      <% else %>
+        <img src="https://spoonacular.com/recipeImages/73420-312x231.jpg", class="picture mt-3"/>
+      <% end %>
+      <div class="card-product-infos">
+        <h2><%=ingredient.ingredient.name %></h2>
+        <p class=<%='best-before' if ingredient.best_before - Date.today <= 2 %>><%=ingredient.best_before %></p>
+        <p>Quantity: <strong><%=ingredient.quantity %></strong></p>
+      </div>
+      <div class="product-card-links">
+        <%= link_to edit_ingredient_pantry_path(ingredient) do %>
+          <i class="fas fa-edit icon-medium"></i>
+        <% end %>
+        <%= link_to ingredient_pantry_path(ingredient), method: :delete do %>
+          <i class="fas fa-trash icon-medium"></i>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>

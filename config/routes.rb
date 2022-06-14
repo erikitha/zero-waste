@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :ingredient_pantries, only: [:index, :new, :create, :destroy]
+  resources :ingredient_pantries, except: :show
   resources :recipes, only: [:show, :index]
   get "profile", to: "pages#profile"
+  get "landing", to: "pages#landing"
   resources :tasks, except: [:show, :new] do
     patch "complete", to: "tasks#complete"
   end
