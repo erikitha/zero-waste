@@ -8,7 +8,7 @@ require "open-uri"
 api_key_recipe = ENV['SPOONACULAR']
 api_key_ingredient = ENV['SPOONACULAR2']
 #cada vez que roda o seed muda o offset, numero mantem o mesmo
-offset = 125 #skip de receitas
+offset = 130 #skip de receitas
 number = 5 #numero de consulta da receita
 
 #recipe
