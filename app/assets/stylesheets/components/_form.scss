@@ -1,14 +1,15 @@
 //Register forms
 .container-form {
-  background: #FF5F6D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #F99C80;
   height: 100%;
+
 }
 .form-login {
   padding: 10px 20px;
-  margin-top: 50px;
+  margin-top: 14px;
   border-radius: 3px;
+  margin-left: 20px;
+
 
   h2 {
     font-size: 25px;
