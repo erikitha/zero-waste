@@ -16,14 +16,14 @@ text-decoration-style: none;
 
 #tasks {
   .fas {
-  margin-right: 5px;
+  margin-right: 8px;
 
   }
 }
 
 #tasks {
   .far {
-  margin-right: 5px;
+  margin-right: 8px;
 
   }
 }
@@ -35,8 +35,6 @@ text-decoration-style: none;
   }
 }
 
-.search-form-control{
-  .btn {
-    border-radius: 20px;
-  }
+#task_title {
+  border-radius: 10px 10px 10px 10px;
 }
