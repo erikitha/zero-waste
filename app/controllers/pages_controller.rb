@@ -8,7 +8,6 @@ class PagesController < ApplicationController
   end
 
   def landing
-
   end
 
   def profile

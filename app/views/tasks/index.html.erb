@@ -1,10 +1,11 @@
 <div class="background-home">
+
     <div class="container">
       <div class="card-checklist">
         <div class="justify-content-center mb-5">
           <%= simple_form_for @task, remote: true, html: { class: "search" } do |f| %>
             <div class="search-form-control form-group">
-              <%= f.input :title, label: false, wrapper: false, placeholder: "New Task", class: "search-checklist" %>
+              <%= f.input :title, label: false, wrapper: false, placeholder: "New Task", class: "search-description" %>
               <button name="button" type="submit" class="btn btn-flat">
                 <i class="fas fa-plus"></i> Add
               </button>

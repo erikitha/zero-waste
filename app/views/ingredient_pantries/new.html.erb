@@ -8,7 +8,7 @@
           <%= f.input :best_before %>
           <%= f.input :lot %>
           <%= f.input :quantity %>
-          <%= f.association :ingredient %>
+          <%= f.association :ingredient, input_html: { class: 'select2', data: {controller: "select2"}} %>
           <%= f.submit class: 'btn btn-warning w-100' %>
         <% end %>
       </div>

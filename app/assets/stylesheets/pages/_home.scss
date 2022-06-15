@@ -13,12 +13,21 @@
   justify-content: center;
 }
 
+.background-logo-edit {
+  height: 80px;
+  position: relative;
+  background-color: $zw-red;
+  margin-top: 220px;
+  display: flex;
+  justify-content: center;
+}
+
 .container-grid {
   position: absolute;
   background-color:white;
   top: 150px;
   width: 81%;
-  height: 67vh;
+  height: 64.5vh;
   left: 9%;
   border-radius: 3%;
   box-shadow: 5px 10px 15px rgba(0,0,0,0.2);
