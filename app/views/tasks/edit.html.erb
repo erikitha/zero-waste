@@ -1,12 +1,14 @@
 <div class="background-home">
-  <div class="container">
-    <div class="card-checklist-edit">
-      <div class="justify-content-center mb-5">
-        <h2 class="text-center">Edit task</h2>
-        <%= render 'form', task: @task %>
-        <%= link_to tasks_path do %>
-          <i class="fa fa-history"></i> Back to list
-        <% end %>
+  <div class="background-logo-edit">
+    <div class="container">
+      <div class="card-checklist-edit">
+        <div class="justify-content-center mb-5">
+          <h2 class="text-center">Edit task</h2>
+          <%= render 'form', task: @task %>
+          <%= link_to tasks_path do %>
+            <i class="fa fa-history"></i> Back to list
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
