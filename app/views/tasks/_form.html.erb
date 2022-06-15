@@ -1,5 +1,10 @@
 <%= simple_form_for(@task) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :completed %>
-  <%= f.submit class: 'btn btn-primary' %>
+  <div class="container">
+    <div class="search-form-control form-group">
+      <%= f.input :title, label: false, wrapper: false, placeholder: "New Task", class: "search-description" %>
+      <button name="button" type="submit" class="btn btn-flat me-3">
+        <i class="far fa-edit"></i> Edit
+      </button>
+    </div>
+  </div>
 <% end %>
