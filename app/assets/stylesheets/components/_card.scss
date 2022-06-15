@@ -71,7 +71,7 @@
   font-weight: bold
 }
 .cards-margim {
-  margin-bottom: 50px;
+  //margin-bottom: 50px;
 }
 
 .card-trip {
@@ -187,4 +187,14 @@
 .best-before {
   color: red;
   font-weight: bold;
+}
+
+.fixed-search {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.margin-recipe {
+  margin: 100px 25px 0 25px;
 }
