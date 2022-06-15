@@ -1,19 +1,22 @@
 <div data-controller="search">
-  <%= form_tag recipes_path, method: :get, class: "simple_form search", data: { search_target: "form" } do %>
-    <div class="search-form-control form-group">
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control string required",
-        placeholder: "Find a Recipe",
-        data: { search_target: "input", action: "input->search#update" }
-      %>
-      <button name="button" type="submit" class="btn btn-flat">
-        <i class="fas fa-search"></i> Search
-      </button>
-    </div>
-  <% end %>
+  <div class="fixed-search">
+    <%= form_tag recipes_path, method: :get, class: "simple_form search", data: { search_target: "form" } do %>
+      <div class="search-form-control form-group">
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control string required",
+          placeholder: "Find a Recipe",
+          data: { search_target: "input", action: "input->search#update" }
+        %>
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+  </div>
   <div class="background-home">
-    <%= render "recipe_infos", recipes: @recipes %>
+    <div class="margin-recipe">
+      <%= render "recipe_infos", recipes: @recipes %>
+    </div>
   </div>
 </div>
-
